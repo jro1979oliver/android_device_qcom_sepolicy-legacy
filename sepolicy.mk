@@ -7,9 +7,10 @@ BOARD_SEPOLICY_DIRS += \
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 BOARD_SEPOLICY_DIRS += \
     device/qcom/sepolicy-legacy/test
+endif
 
 SELINUX_IGNORE_NEVERALLOWS := true
-endif
+SELINUX_IGNORE_NEVERALLOWS_ON_USER := true
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
     device/qcom/sepolicy-legacy/public
